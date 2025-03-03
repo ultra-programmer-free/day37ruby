@@ -78837,22 +78837,13 @@ exports.Login = void 0;
 var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var use_auth_1 = __webpack_require__(/*! ../hooks/use-auth */ "./src/js/hooks/use-auth.ts");
 var react_1 = __webpack_require__(/*! @chakra-ui/react */ "./node_modules/@chakra-ui/react/dist/cjs/index.cjs");
-var react_2 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 var Login = function () {
-    var _a = (0, use_auth_1.useAuth)(), isLoggeIn = _a.isLoggeIn, login = _a.login, userName = _a.userName, setUserName = _a.setUserName;
-    var navigate = (0, react_router_dom_1.useNavigate)();
-    //ログイン中だった場合は、/todoに遷移させる
-    (0, react_2.useEffect)(function () {
-        if (isLoggeIn) {
-            navigate("/todo");
-        }
-    }, [isLoggeIn]);
-    return (React.createElement(react_1.Box, { as: "main", w: 400, mx: "auto", mt: "20" },
+    var _a = (0, use_auth_1.useAuth)(), login = _a.login, userName = _a.userName, setUserName = _a.setUserName;
+    React.createElement(react_1.Box, { as: "main", w: 400, mx: "auto", mt: "20" },
         React.createElement(react_1.Heading, { as: "h1", size: "xl" }, "\u30ED\u30B0\u30A4\u30F3"),
         React.createElement(react_1.HStack, { spacing: 4, mt: 10 },
             React.createElement(react_1.Input, { placeholder: "\u30E6\u30FC\u30B6\u540D", value: userName, onChange: function (e) { return setUserName(e.target.value); }, w: 40 }),
-            React.createElement(react_1.Button, { colorScheme: "blue", onClick: login }, "\u30ED\u30B0\u30A4\u30F3"))));
+            React.createElement(react_1.Button, { colorScheme: "blue", onClick: login }, "\u30ED\u30B0\u30A4\u30F3")));
 };
 exports.Login = Login;
 
@@ -114269,7 +114260,7 @@ function __rewriteRelativeImportExtension(path, preserveJsx) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("7dd9e0b8caaa5d3cbb94")
+/******/ 		__webpack_require__.h = () => ("7b2e97d765be1e75862d")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
