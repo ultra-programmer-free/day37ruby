@@ -11,7 +11,6 @@ export const NewTodoForm = ({ addTodo}: Props) => {
         const [newTask, setNewTask] = useState<string>("");
         const [newPerson, setNewPerson] = useState<string>("");
         const [newDeadline, setNewDeadline] = useState<string>("");
-        console.log("NewTodoFormコンポーネントのレンダー")
     
     const addNewTodo = () => {
  addTodo(newTask, newPerson, newDeadline);

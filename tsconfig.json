@@ -1,15 +1,23 @@
 {
-    "compilerOptions": {
-      "jsx": "react", // <- これを追加
-      // ソースマップを有効化
-      "sourceMap": true,
-      // TSはECMAScript 5に変換
-      "target": "ES5",
-      // TSのモジュールはES Modulesとして出力
-      "module": "NodeNext",
-      "moduleResolution": "NodeNext",
-      // 厳密モードとして設定
-      "strict": true
-    }
+  "compilerOptions": {
+    "jsx": "react",
+    // ソースマップを有効化
+    "sourceMap": true,
+    // TSはECMAScript 5に変換
+    "target": "ES5",
+    // TSのモジュールはES Modulesとして出力
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    // 厳密モードとして設定
+    "strict": true,
+    // ESモジュールとCommonJSモジュールの互換性を向上させるための設定
+    "esModuleInterop": true, // <- 追加
+    // 参照する型定義のリストを明示的に指定する
+    "types": [
+      "jest",
+      "@testing-library/jest-dom",
+      "@testing-library/react",
+      "node"
+    ] // <- 追加
   }
-  
+}

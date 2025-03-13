@@ -1,10 +1,10 @@
 import { Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from "@chakra-ui/react"
 import React, { memo } from "react"
-import { Todo } from "../../types/todo";
-import { TodoItem } from "./TodoItem";
+import { Todo } from "../../../types/todo";
+import { TodoItem } from "../todo-item";
 type Props = {
     todoList: Todo[];
-    deleteTodo: (id: number) => void;
+    deleteTodo: (id: string) => void;
 }
 
 export const TodoTable = memo(({ todoList, deleteTodo}: Props) => {
@@ -13,7 +13,7 @@ export const TodoTable = memo(({ todoList, deleteTodo}: Props) => {
   <Table variant='simple'>
     <Thead>
       <Tr>
-      
+      <Th>ID</Th>
         <Th>タスク名</Th>
         <Th>担当者名</Th>
         <Th>締切</Th>
